@@ -79,10 +79,10 @@ b, strong {
   border-left-color: #080807;
   border-right-color: #080807;
   border-top-color: #020202;
-  box-shadow: inset 0 0 24rem black, inset 0 0 5rem black, 0 0 16rem black;
+  box-shadow: inset 0 0 1rem black, inset 0 0 5rem black, 0 0 16rem black;
   pointer-events: none;
-  max-width: 1200px;
-  height: 750px;
+  max-width: 1600px;
+  height: 1000px;
   width: 96%;
   max-height: calc(100vh - 20px);
   margin: 0 auto;
@@ -223,9 +223,28 @@ b, strong {
   left: 40px;
   z-index: 2;
   letter-spacing: 0.1em;
+  font-weight: bold;
 }
 
-.pip-title::after {
+.pip-title-name {
+  outline: currentcolor solid 4px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: rgb(var(--main));
+  position: absolute;
+  padding: 12px 8px;
+  text-transform: uppercase;
+  top: -15px;
+  left: 40px;
+  z-index: 2;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+
+.pip-title::after,
+.pip-title-name::after {
   background: #111;
   content: "";
   height: 3px;
@@ -243,6 +262,7 @@ b, strong {
   width: max-content;
   max-width: 100%;
   text-align: right;
+  font-size: 17px;
   background: linear-gradient(
     to bottom,
     var(--black) 0%,
@@ -330,9 +350,11 @@ label {
 
 .options {
   display: block;
-  width: 300px;
+  width: 360px;
   max-width: 32%;
-  position: fixed; 
+  position: fixed;
+  font-size: 18px;
+  line-height: 30px;
 }
 
 .colors {
@@ -346,6 +368,11 @@ label {
   text-align: center;
   transition: all 0.1s ease;
   margin: 5px;
+}
+
+.options .subtitle {
+  font-size: 60px;
+  text-decoration: underline;
 }
 
 .options input,
@@ -400,6 +427,11 @@ label {
 .options input:checked + label::before, .options .active a::before {
   background: currentColor;
   outline-color: currentColor;
+}
+
+.options input:checked + label, .options .active a {
+  color: var(--black);
+  background: rgb(var(--main), 0.8);
 }
 
 .pip-foot {
@@ -572,6 +604,8 @@ a:hover {
 .info-table .vboy-wrap {
   width: 100%;
   text-align: left;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 .info-table li::after,
@@ -606,6 +640,38 @@ a:hover {
   filter: hue-rotate(-52deg) saturate(0.9);
 }
 
+.info .info-body .info-table .skills {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.info .info-body .info-table .skills .icon-skills .filter {
+  display: block;
+  height: 4rem;
+  background: none;
+  border: none;
+  color: rgb(var(--main));
+  outline: currentcolor solid 2px;
+  padding: 0 5px;
+  top: -15px;
+  left: 40px;
+  z-index: 2;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.info .info-body .info-table .flow-image .filter {
+  display: block;
+  width: 100%;
+  text-align: left;
+  line-height: 25px;
+}
+
 .item-icon {
   position: absolute;
   bottom: 4px;
@@ -614,12 +680,13 @@ a:hover {
 
 .icon {
   float: left;
-  width: 40px;
-  height: 40px;
+  width: 250px;
+  height: 250px;
   margin-top: -20px;
   margin-right: 7px;
   border: 2px solid;
   object-fit: contain;
+  margin-left: 20px;
 }
 
 .icon img {
@@ -703,6 +770,9 @@ a:hover {
     width: 100%;
     max-height: unset;
     border: none;
+    position: fixed;
+    padding: 10px;
+    box-sizing: border-box;
   }
   
   .output {
@@ -806,6 +876,26 @@ a:hover {
     -webkit-filter: brightness(1);
     filter: brightness(1);
   }
+}
+
+
+.fade-a {
+  animation: fade-swap 8s infinite;
+  animation-delay: -4s;
+  opacity: 1;
+}
+
+.fade-b {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 0 6px;
+  opacity: 0;
+  animation: fade-swap 8s infinite;
+}
+
+.pip-head .fade-b {
+  padding: 0 10px;
 }
 
 html.amber {
@@ -915,4 +1005,14 @@ html.black {
     width: 100%;
     left: 0;
   }
+}
+
+.github-button {
+  background-color: #24292e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
 }

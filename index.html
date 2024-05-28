@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Quien es Adrian Rivera Cortez</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
 
 </head>
@@ -25,7 +26,7 @@
       <div class="tab-content">
 
         <div class="tab-pane fade in active" id="items">
-          <h3 class="pip-title">Adrian Rivera Cortez</h3>
+          <h3 class="pip-title-name">Adrian Rivera Cortez</h3>
           <ul class="pip-head">
             <li><b>Wg</b> 39/125</li>
             <li><b>HP</b> 19/19</li>
@@ -34,17 +35,28 @@
           </ul>
           <div class="pip-body">
             <ul class="options">
-              <li><input type="radio" id="radio1" name="radio">
-                <label for="radio1" data-target="brass">Brass Knuckles</label>
-              </li>
+              <br><br><br>
               <li><input type="radio" checked="checked" id="radio2" name="radio">
-                <label for="radio2" data-target="hunting">Hunting Rifle</label>
+                <label for="radio2" data-target="about">About me</label>
+              </li>
+              <br></br>
+              <li>
+                <p class="subtitle">Proyectos</p><br>
+              </li>
+              <li><input type="radio" id="radio1" name="radio">
+                <label for="radio1" data-target="monitoring">Monitoreo de Servidores</label>
               </li>
               <li><input type="radio" id="radio3" name="radio">
-                <label for="radio3">Long Fuse Dynamite (11)</label>
+                <label for="radio3" data-target="restore">Procedimientos de Recuperación</label>
               </li>
               <li><input type="radio" id="radio4" name="radio">
-                <label for="radio4">Plasma Pistol</label>
+                <label for="radio4" data-target="products">Desarrollo de Productos</label>
+              </li>
+              <li><input type="radio" id="radio5" name="radio">
+                <label for="radio5" data-target="automation">Automatización de Servidores</label>
+              </li>
+              <li><input type="radio" id="radio6" name="radio">
+                <label for="radio6" data-target="tools">Herramientas de Desarrollo</label>
               </li>
             </ul>
 
@@ -56,11 +68,35 @@
               <div class="info-body">
                 <ul class="info-table">
                   <li class="vboy-wrap">
-                    <!-- <div class="item-icon"><span class="icon"><img class="filter" src="https://cybersandbox.ca/resources/556mm_round_icon.png"></span>0</div> -->
+                    <div class="item-icon"><span class="icon"><img class="filter" src="/images/adrian.jpeg"></span></div>
                     <div class="vboy filter"></div>
                   </li>
-                  <li class="span-2" id="brass" style="display: none;">hola buenas tardes</li>
-                  <li class="span-2" id="hunting" style="display: none;">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</li>
+                  <li class="span-2" id="about">Adrián Rivera Cortez, Nacido en caracas Venezuela en el 2004, Apasionado por los videojuegos, las automatizaciones y el arte, Devops y SRE desde 2022.</li>
+                  <li class="span-2" id="monitoring" style="display: none;"> 
+                    Desarrollé e implementé un sistema integral de monitorización de servidores, liderando la configuración de aplicaciones, la recolección de datos y la creación de alertas personalizadas para cada escenario de aumento de recursos o caída del servidor. Además, establecí notificaciones automáticas y modifique un dashboard personalizado para la visualización eficiente de los datos recopilados.
+                    <ul class="skills">
+                      <span class="icon-skills"><img class="filter" src="/images/ansible.png"></span>
+                      <span class="icon-skills"><img class="filter" src="/images/jenkins.Default"></span>
+                      <span class="icon-skills"><img class="filter" src="/images/docker-compose.png"></span>
+                      <span class="icon-skills"><img class="filter" src="/images/yml.webp"></span>
+                    </ul>
+                    <span class="flow-image"><image class="filter" src="/images/monitoring.png"></image></span>
+                  </li>
+                  
+                  <li class="span-2" id="restore" style="display: none;"> 
+                    Dirigí el desarrollo e implementación de un sistema de generación de backups altamente personalizado. Utilizando un cronograma (crontab), permití la programación de los backups para adaptarse a fechas específicas. Este sistema respalda tanto bases de datos MySQL, como aplicaciones y WordPress. Un script en Shell se encarga de esta tarea, comprimiendo los backups para facilitar su movilidad. Finalmente, los backups son almacenados en un proveedor de nube para garantizar su seguridad y accesibilidad.
+                    <ul class="skills">
+                      <span class="icon-skills"><img class="filter" src="/images/python.png"></span>
+                      <span class="icon-skills"><img class="filter" src="/images/shell-script.png"></span>
+                      <span class="icon-skills"><img class="filter" src="/images/ansible.png"></span>
+                      <span class="icon-skills"><img class="filter" src="/images/docker.png"></span>
+                      <span class="icon-skills"><img class="filter" src="/images/yml.webp"></span>
+                    </ul>
+                    <span class="flow-image"><image class="filter" src="/images/backups.png"></image></span>
+                  </li>
+                  <li class="span-2" id="products" style="display: none;"> Lideré la creación de un producto gratuito en WordPress, enfocándome en optimizar el tiempo de creación a menos de 5 segundos y reducir el consumo de recursos del servidor mediante la optimización de la base de datos. Estas mejoras contribuyeron significativamente al aumento de la visibilidad de la empresa. <br> Además, implementé numerosas mejoras en otros productos similares, asegurando una mayor eficiencia y optimización.</li>
+                  <li class="span-2" id="automation" style="display: none;"> Desarrollé una herramienta que crea servidores en múltiples plataformas, incluyendo Digital Ocean, AWS, Hetzner y Oracle Cloud Infrastructure. Esta herramienta automatiza el proceso, permitiendo la creación de servidores con pocos clics, optimizando la eficiencia operativa y reduciendo costos. </li>
+                  <li class="span-2" id="tools" style="display: none;">  Desarrollé una herramienta para cambiar el nombre de un dominio en WordPress, modificando tanto los archivos como la base de datos MySQL. Además, creé una herramienta que permite escalar verticalmente todos los recursos de un servidor en proveedores como AWS, Hetzner y Digital Ocean. </li>
                 </ul>
               </div>
             </div>
@@ -204,14 +240,15 @@
           <h3 class="pip-title">Radio</h3>
           <div class="pip-body">
             <ul class="options">
-              <li><input type="checkbox" id="check" checked><label for="check">00_default</label></li>
-              <li class="disabled"><label>//Null</label></li>
-              <li class="disabled"><label>//Null</labe>
+              <li><input type="checkbox" id="check" checked><label for="check">Redes</label></li>
+              <li class="disabled"><label>procimamente</label></li>
+              <li class="disabled"><label>proximamente</labe>
               </li>
             </ul>
             <div class="info">
               <div class="post">
-                No data.
+                <button class="github-button" onclick="window.location.href='https://github.com/adrian-river'">Ir a GitHub</button>
+                <button class="github-button" onclick="window.location.href='https://www.linkedin.com/in/adrian-rivera-0b58b2241/'">Ir a Linkedin</button>
               </div>
             </div>
           </div>
@@ -232,3 +269,11 @@
 
 </body>
 </html>
+
+<div class="article">
+  <ul class="skills">
+    <il></il>
+    <il></il>
+    <il></il>
+  </ul>
+</div>

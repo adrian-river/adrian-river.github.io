@@ -113,18 +113,15 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Selecciona todos los labels de los ítems
   var itemLabels = document.querySelectorAll('.options label');
 
   itemLabels.forEach(function(label) {
     label.addEventListener('click', function() {
-      // Oculta todos los mensajes
       var infoItems = document.querySelectorAll('.info-table .span-2');
       infoItems.forEach(function(item) {
         item.style.display = 'none';
       });
 
-      // Muestra el mensaje correspondiente al ítem seleccionado
       var targetId = label.getAttribute('data-target');
       var targetItem = document.getElementById(targetId);
       if (targetItem) {
