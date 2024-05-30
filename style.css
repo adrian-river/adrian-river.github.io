@@ -1063,6 +1063,10 @@ html.black {
   transition: background 0.3s;
 }
 
+#downloadBtn.github-button {
+  padding: 10px;
+  width: 290px;
+}
 #copy-button img:hover {
   background: currentColor;
 }
