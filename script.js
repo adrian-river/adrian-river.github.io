@@ -130,3 +130,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+document.getElementById('copy-button').addEventListener('click', function() {
+  var emailField = document.getElementById('email');
+  
+  // Select the email text
+  emailField.select();
+  emailField.setSelectionRange(0, 99999); // For mobile devices
+  
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(emailField.value).then(function() {
+    alert('Correo copiado al portapapeles: ' + emailField.value);
+  }).catch(function(error) {
+    alert('Error al copiar el correo: ' + error);
+  });
+});
